@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Finanzen</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="button_save_entry">Speichern</string>
+    <string name="t_sum">"Summe: "</string>
+    <string name="t_transaction_amount">Betrag</string>
+    <string name="button_reset">Zurücksetzen</string>
+    <string name="button_export">Exportieren</string>
+    <string name="button_import">Importieren</string>
+    <string name="location_dialog_export">Speicherort auswählen:</string>
+    <string name="location_dialog_import">Datei zum Importieren wählen:</string>
+    <string name="t_purpose">Zweck</string>
+    <string name="m_january">Januar</string>
+    <string name="m_february">Februar</string>
+    <string name="m_december">Dezember</string>
+    <string name="m_march">März</string>
+    <string name="m_april">April</string>
+    <string name="m_may">Mai</string>
+    <string name="m_june">Juni</string>
+    <string name="m_july">Juli</string>
+    <string name="m_september">September</string>
+    <string name="m_october">Oktober</string>
+    <string name="m_november">November</string>
+    <string name="m_august">August</string>
+    <string name="msg_delete">Diesen Eintrag löschen?</string>
+    <string name="w_reset">Transaktionshistorie zurücksetzen?</string>
+    <string name="msg_action_irreversible">Dieser Vorgang lässt sich nicht rückgängig machen.</string>
+    <string name="msg_feature_in_development">Diese Funktion befindet sich noch in der Entwicklung</string>
+    <string name="p_food">Essen und Trinken</string>
+    <string name="p_phone">Handy</string>
+    <string name="p_clothes">Klamotten</string>
+    <string name="p_hairdresser">Friseur</string>
+    <string name="p_transportation">Öffentlicher Nahverkehr</string>
+    <string name="t_currency">€</string>
+</resources>

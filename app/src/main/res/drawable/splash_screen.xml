@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/cardview_dark_background"/>
+    <item
+        android:width="150dp"
+        android:height="150dp"
+        android:gravity="center">
+        <bitmap android:src="@drawable/icon_money_bag" android:gravity="fill_horizontal|fill_vertical"/>
+    </item>
+    <item
+        android:height="60dp"
+        android:width="240dp"
+        android:bottom="60dp"
+        android:gravity="bottom|center_horizontal">
+        <bitmap android:src="@drawable/splash_title" android:gravity="fill"/>
+    </item>
+</layer-list>

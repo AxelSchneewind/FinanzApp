@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.schneewind.finances.MainActivity">
+    <item
+        android:id="@+id/import_button"
+        android:title="@string/button_import" />
+    <item
+        android:id="@+id/export_button"
+        android:title="@string/button_export" />
+    <item
+        android:id="@+id/reset_button"
+        android:title="@string/button_reset" />
+</menu>

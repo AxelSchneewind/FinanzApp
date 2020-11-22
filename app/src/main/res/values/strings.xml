@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Finances</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_save_entry">Save</string>
+    <string name="t_transaction_amount">Amount</string>
+    <string name="t_sum">"Balance: "</string>
+    <string name="button_reset">Reset</string>
+    <string name="button_export">Export</string>
+    <string name="button_import">Import</string>
+    <string name="location_dialog_export">Select a location:</string>
+    <string name="location_dialog_import">Select file to import:</string>
+    <string name="t_purpose">Purpose</string>
+    <string name="m_january">January</string>
+    <string name="m_february">February</string>
+    <string name="m_december">December</string>
+    <string name="m_march">March</string>
+    <string name="m_april">April</string>
+    <string name="m_may">May</string>
+    <string name="m_june">June</string>
+    <string name="m_july">July</string>
+    <string name="m_august">August</string>
+    <string name="m_september">September</string>
+    <string name="m_october">October</string>
+    <string name="m_november">November</string>
+    <string name="msg_delete">Delete this entry?</string>
+    <string name="w_reset">Reset your transaction history?</string>
+    <string name="msg_action_irreversible">This action is irreversible.</string>
+    <string name="msg_feature_in_development">This feature is still in development</string>
+    <string name="p_food">Food and Beverages</string>
+    <string name="p_phone">Phone</string>
+    <string name="p_clothes">clothes</string>
+    <string name="p_hairdresser">Hairdresser</string>
+    <string name="p_transportation">Transportation</string>
+    <string name="t_currency">$</string>
+</resources>
