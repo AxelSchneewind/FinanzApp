@@ -1,7 +1,9 @@
 package com.schneewind.finances;
 
 import android.content.Context;
+import android.os.Environment;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -13,8 +15,9 @@ import java.util.ArrayList;
 public class FileHelper {
     public static final String FILENAME = "transactions.txt";
 
-    public static void writeData(ArrayList<String> entries, String filename, Context context){
+    public static void writeDataToFile(ArrayList<String> entries, String filename, Context context){
         try {
+            File file = new File(Environment.getExternalStorageDirectory() + "/Downloads/")
             FileOutputStream fos = context.openFileOutput(filename, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(entries);
@@ -27,11 +30,14 @@ public class FileHelper {
             e.printStackTrace();
         }
     }
-    public static void writeData(ArrayList<String> entries, Context context) {
-        writeData(entries,FILENAME, context);
+    public static void writeDataToDefaultFile(ArrayList<String> entries, Context context) {
+        writeDataToFile(entries,FILENAME, context);
+    }
+    public static void writeDataToExternalFile(ArrayList<String> entries, Context context){
+        writeDataToFile(entries,  + FILENAME, context);
     }
 
-    public static ArrayList<String> readData(String filename, Context context){
+    public static ArrayList<String> readDataFromFile(String filename, Context context){
         ArrayList<String> entryList = null;
         try {
             FileInputStream fis = context.openFileInput(filename);
@@ -47,7 +53,7 @@ public class FileHelper {
         }
         return entryList;
     }
-    public static ArrayList<String> readData(Context context){
-        return readData(FILENAME, context);
+    public static ArrayList<String> readDataFromDefaultFile(Context context){
+        return readDataFromFile(FILENAME, context);
     }
 }

@@ -3,7 +3,6 @@ package com.schneewind.finances;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //List
-        entries_DataSet = FileHelper.readData(this);
+        entries_DataSet = FileHelper.readDataFromDefaultFile(this);
         entryViews = new ArrayList<>();
         transactions = new ArrayList<>();
         getTransactions();
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             entries_DataSet.clear();
-                            FileHelper.writeData(entries_DataSet,context);
+                            FileHelper.writeDataToDefaultFile(entries_DataSet,context);
                             getTransactions();
                             customAdapter.notifyDataSetChanged();
                         }})
@@ -124,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if(id == R.id.export_button){
+            FileHelper.writeDataToExternalFile(entries_DataSet, MainActivity.this);
             Toast.makeText(this, R.string.msg_feature_in_development,Toast.LENGTH_SHORT).show();
         }
 
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void DataSetChanged(){
-        FileHelper.writeData(entries_DataSet, this);
+        FileHelper.writeDataToDefaultFile(entries_DataSet, this);
         entryViews.clear();
         getTransactions();
         customAdapter.notifyDataSetChanged();
@@ -232,8 +232,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    class CustomAdapter extends BaseAdapter{
 
+    class CustomAdapter extends BaseAdapter{
         @Override
         public int getCount() {
             return entries_DataSet.size();
